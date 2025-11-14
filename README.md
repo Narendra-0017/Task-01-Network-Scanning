@@ -81,8 +81,3 @@ RST packets indicate **closed ports** rejecting the connection attempt.
 
 The scan identified two active hosts and revealed both open and closed ports.
 Wireshark confirms the behavior of a TCP SYN scan through captured SYN, SYN-ACK, and RST packets.
-
----
-
-This will render **perfectly** on GitHub.
-Paste this into your README.md and refresh the page.
