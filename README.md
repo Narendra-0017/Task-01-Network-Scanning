@@ -1,4 +1,4 @@
-# Task 1 – Local Network Port Scanning
+Task 1 – Local Network Port Scanning
 
 Tools Used: Nmap, Wireshark
 Network Range Scanned: 10.87.88.0/24
@@ -7,9 +7,7 @@ Command Used:
 nmap -sS 10.87.88.0/24
 
 Scan Results Summary
-
 Active Hosts Found:
-
 IP Address	Device	Open Ports	Services
 10.87.88.224	Router	53	DNS
 10.87.88.89	My Laptop	135, 139, 445, 5357	MSRPC, NetBIOS, SMB, WSDAPI
@@ -24,7 +22,7 @@ Filter used:
 tcp.flags.syn == 1 and tcp.flags.ack == 0
 
 
-These packets show Nmap probing hosts using a half-open (TCP SYN) scan.
+Shows Nmap sending SYN packets to probe ports using a half-open TCP SYN scan.
 
 Screenshot: wireshark_syn.png
 
@@ -46,7 +44,7 @@ Filter used:
 tcp.flags.reset == 1
 
 
-RST packets indicate closed ports when the host rejects the connection attempt.
+RST packets indicate closed ports rejecting the connection attempt.
 
 Screenshot: wireshark_rst.png
 
@@ -64,5 +62,5 @@ README.md
 
 Conclusion
 
-The scan identified two active devices and revealed both open and closed ports.
-The Wireshark captures confirm how TCP SYN scanning works at the packet level, showing SYN probes, SYN-ACK responses for open ports, and RST responses for closed ports.
+The scan identified two active hosts and revealed both open and closed ports.
+Wireshark confirms the behavior of a TCP SYN scan through captured SYN, SYN-ACK, and RST packets.
